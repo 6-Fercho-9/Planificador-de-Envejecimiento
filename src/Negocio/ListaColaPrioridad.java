@@ -6,7 +6,7 @@ import java.util.List;
 public class ListaColaPrioridad {
     private List<ColaPrioridad> listaColaPrioridad;
     private int k=0;
-    private static final int COLAS_POR_DEFECTO=3;
+    private static final int COLAS_POR_DEFECTO=5;
     public ListaColaPrioridad(){
         listaColaPrioridad=new ArrayList<>();
     }
@@ -211,6 +211,14 @@ public class ListaColaPrioridad {
             cola.eliminarPCBDeLaCola2(unPCB);
     }
 
+    /**
+     * metodo para eliminar todos clones de todas las colas
+     */
+    public void eliminarTodasLasCopiar(){
+        for(ColaPrioridad cola:this.listaColaPrioridad){
+            cola.eliminarClonesDeTodasLasColas();
+        }
+    }
     public void vaciar(){
         this.listaColaPrioridad.clear();
     }

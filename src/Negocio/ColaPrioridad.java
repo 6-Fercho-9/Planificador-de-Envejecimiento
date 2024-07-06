@@ -136,6 +136,17 @@ public class ColaPrioridad {
         listaPCB.remove(unPCB);
     }
 
+    /**
+     * metodo para eliminar todos los clones de una cola
+     */
+    public void eliminarClonesDeTodasLasColas(){
+        List<PCB> listaPCB=(List<PCB>) this.colaPrioridad;
+        for (int i = 0; i < listaPCB.size(); i++) {
+            if(listaPCB.get(i).esClon()){
+                listaPCB.remove(i);
+            }
+        }
+    }
     @Override
     public String toString(){
         return this.colaPrioridad.toString();

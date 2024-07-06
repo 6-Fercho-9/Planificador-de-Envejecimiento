@@ -37,6 +37,13 @@ public class PCB implements Comparable<PCB> {
         this.clon=clon;
         this.clave=this.nombreProceso+this.id;
     }
+    public PCB(String nombreProceso,int id,boolean clon,double quantum){
+        this.nombreProceso=nombreProceso;
+        this.id=id;
+        this.quantum =quantum;
+        this.clon=clon;
+        this.clave=this.nombreProceso+this.id;
+    }
     public PCB(String nombreProceso,int id,int quantum){
         this.nombreProceso=nombreProceso;
         this.quantum =quantum;
